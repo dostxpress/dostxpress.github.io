@@ -3,9 +3,9 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
-// GitHub Pages project URL: https://<user>.github.io/dostxpress_website/
-// If your repo name differs, change the base path below.
-export default defineConfig(({ command }) => ({
+// Repo `dostxpress.github.io` + custom domain dostxpress.com → site is served at URL
+// root (/). A subpath base (e.g. /repo-name/) would break CSS/JS asset URLs.
+export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: command === 'build' ? '/' : '/',
-}))
+  base: '/',
+})
