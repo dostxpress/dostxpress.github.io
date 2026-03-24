@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const words = ["Fast Deliveries", "Secure Parcels", "Reliable"];
+const words = ["Fast Deliveries", "Secure Parcels", "Reliable Partners"];
 
 const Hero = () => {
     const [index, setIndex] = useState(0);
@@ -37,8 +37,7 @@ const Hero = () => {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -40 }}
                             transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
-                            className="absolute left-0 right-0 w-full flex justify-center text-primary text-2xl md:text-3xl font-semibold"
-                            style={{ whiteSpace: "nowrap" }}
+                            className="absolute left-0 right-0 w-full flex justify-center text-primary"
                         >
                             {words[index]}
                         </motion.span>
